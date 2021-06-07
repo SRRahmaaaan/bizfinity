@@ -1,0 +1,40 @@
+.call {
+    background: url("../media/call.jpg") no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+    color: $light-color;
+    z-index: 1;
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        .right {
+            background-color: $light-color;
+            color: $dark-color;
+            padding: 70px 50px;
+        }
+    }
+    .left p {
+        color: $light-color;
+    }
+}
+.call::before {
+    @include ba;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+.call .right .inputs {
+    input,
+    textarea {
+        border: 1px solid #ccc;
+        margin: 10px 0;
+        width: 100%;
+        padding: 1rem;
+        font-weight: 700;
+    }
+    .input-2,
+    .input-3 {
+        width: 50%;
+    }
+    button {
+        width: 100%;
+    }
+}

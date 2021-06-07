@@ -2,10 +2,12 @@
 @import "_utilities";
 @import "_variables";
 @import "_margins&paddings";
+@import "_mixin.scss";
 @import "_navbar.scss";
 @import "_banner.scss";
 @import "_about.scss";
 @import "_services.scss";
+@import "_call.scss";
 * {
   margin: 0;
   padding: 0;
