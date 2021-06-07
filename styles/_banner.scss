@@ -1,5 +1,6 @@
 .banner {
     height: calc(100vh - 80px);
+    margin-top: 80px;
     .grid {
         grid-template-columns: repeat(2, 1fr);
         height: 100%;
@@ -31,21 +32,27 @@
             scroll-behavior: smooth;
             align-items: center;
             height: 100%;
-            margin: 0 4rem 0 7rem;
+            margin: 0 0rem 0 7.8rem;
         }
         .slide {
             flex: 0 0 100%;
             width: 100%;
             scroll-snap-align: start;
-            button {
-            background-color: $light-color;
-            color: $base-color;
-            }
-            button:hover {
-            color: $light-color;
-            }
-            button:hover::before {
-            background-color: $base-color;
+            .headings{
+                p{
+                    width: 85%;
+                    margin: 1.5rem 0;
+                }
+                button {
+                    background-color: $light-color;
+                    color: $base-color;
+                }
+                button:hover {
+                    color: $light-color;
+                }
+                button:hover::before {
+                    background-color: $base-color;
+                }
             }
         }
         }

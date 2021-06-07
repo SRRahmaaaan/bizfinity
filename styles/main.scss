@@ -4,6 +4,7 @@
 @import "_margins&paddings";
 @import "_navbar.scss";
 @import "_banner.scss";
+@import "_about.scss";
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +13,9 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+#home {
+  overflow: hidden;
+}

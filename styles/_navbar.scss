@@ -1,6 +1,10 @@
 .navbar {
     height: 80px;
     box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.05);
+    background-color: $light-color;
+    position: fixed;
+    z-index: 111;
+    width: 100%;
     .flex {
         justify-content: space-between;
         .logo {
