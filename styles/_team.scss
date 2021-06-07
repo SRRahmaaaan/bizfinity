@@ -1,0 +1,53 @@
+.team {
+    background: $section-bg;
+    .section-head {
+        width: 35%;
+        margin: 0 auto;
+    }
+    .grid {
+        gap: 20px;
+    }
+    .card {
+        background-color: $light-color;
+        margin-bottom: 5rem;
+        .imgBx {
+            position: relative;
+            .social-media {
+            @include ba;
+            @include tra;
+            background-color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            opacity: 0;
+                .icons {
+                    @include tra;
+                    transform: translateY(300px) rotateX(90deg);
+                    i {
+                        @include tra;
+                        background-color: $light-color;
+                        margin: 0 5px;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+        .identity {
+        margin: 1rem 1.5rem 0 1.5rem;
+        border-bottom: 4px solid $base-color;
+            p {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+.team .card:hover .social-media {
+    opacity: 1;
+}
+.team .card:hover .social-media .icons {
+    transform: translateY(300px) rotateX(0deg);
+}
+.team .card .social-media .icons i:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $base-color;
+    color: $light-color;
+}

@@ -9,6 +9,7 @@
 @import "_services.scss";
 @import "_call.scss";
 @import "_portfolio.scss";
+@import "_team.scss";
 * {
   margin: 0;
   padding: 0;
@@ -24,5 +25,10 @@ html {
   overflow: hidden;
 }
 #services {
-  background: #f9faff;
+  background: $section-bg;
+}
+#portfolio,
+#about,
+#services {
+  padding-top: 5.5rem;
 }
