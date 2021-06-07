@@ -1,0 +1,72 @@
+.portfolio {
+    .section-head {
+        width: 35%;
+        margin: 0 auto;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        @include tra;
+        text-align: center;
+        padding: 5px 15px;
+        background-color: #eff2f9;
+        font-weight: 900;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .boxes .box {
+        @include tra;
+        display: inline-block;
+        height: 350px;
+        width: 350px;
+        position: relative;
+        overflow: hidden;
+        margin: 5px;
+        img {
+            @include ba;
+            object-fit: cover;
+        }
+        .content {
+            @include tra;
+            @include ba;
+            background-color: rgba(252, 84, 4, 0.7);
+            transform: scale(0) rotate(90deg);
+            flex-direction: column;
+            color: $light-color;
+            text-align: center;
+            padding: 0 3rem;
+            p {
+                color: $light-color;
+                margin: 1.5rem 0;
+            }
+            button {
+                background: transparent;
+                border: 2px solid $light-color;
+                color: $light-color;
+            }
+            button:hover {
+                background-color: $light-color;
+                color: $base-color;
+            }
+        }
+    }
+}
+.portfolio .boxes .box:hover .content {
+    transform: scale(1) rotate(0);
+}
+#branding:checked ~ .boxes > div:not([class*="branding"]),
+#marketing:checked ~ .boxes > div:not([class*="marketing"]),
+#web-design:checked ~ .boxes > div:not([class*="web-design"]),
+#graphic-design:checked ~ .boxes > div:not([class*="graphic-design"]) {
+    height: 0;
+    width: 0;
+}
+#all:checked ~ .all,
+#branding:checked ~ .branding,
+#marketing:checked ~ .marketing,
+#web-design:checked ~ .web-design,
+#graphic-design:checked ~ .graphic-design {
+    background-color: $base-color;
+    color: $light-color;
+}

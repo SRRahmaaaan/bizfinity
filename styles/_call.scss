@@ -6,10 +6,12 @@
     z-index: 1;
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 6rem 0;
         .right {
             background-color: $light-color;
             color: $dark-color;
             padding: 70px 50px;
+            border-top: 10px solid $base-color;
         }
     }
     .left p {

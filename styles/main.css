@@ -696,12 +696,14 @@ textarea:focus {
 .call .grid {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 6rem 0;
 }
 
 .call .grid .right {
   background-color: #fff;
   color: #000;
   padding: 70px 50px;
+  border-top: 10px solid #fc5404;
 }
 
 .call .left p {
@@ -735,6 +737,107 @@ textarea:focus {
 
 .call .right .inputs button {
   width: 100%;
+}
+
+.portfolio .section-head {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.portfolio input[type="radio"] {
+  display: none;
+}
+
+.portfolio label {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  padding: 5px 15px;
+  background-color: #eff2f9;
+  font-weight: 900;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.portfolio .boxes .box {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  height: 350px;
+  width: 350px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.portfolio .boxes .box img {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .boxes .box .content {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 84, 4, 0.7);
+  -webkit-transform: scale(0) rotate(90deg);
+          transform: scale(0) rotate(90deg);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.portfolio .boxes .box .content p {
+  color: #fff;
+  margin: 1.5rem 0;
+}
+
+.portfolio .boxes .box .content button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.portfolio .boxes .box .content button:hover {
+  background-color: #fff;
+  color: #fc5404;
+}
+
+.portfolio .boxes .box:hover .content {
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+}
+
+#branding:checked ~ .boxes > div:not([class*="branding"]),
+#marketing:checked ~ .boxes > div:not([class*="marketing"]),
+#web-design:checked ~ .boxes > div:not([class*="web-design"]),
+#graphic-design:checked ~ .boxes > div:not([class*="graphic-design"]) {
+  height: 0;
+  width: 0;
+}
+
+#all:checked ~ .all,
+#branding:checked ~ .branding,
+#marketing:checked ~ .marketing,
+#web-design:checked ~ .web-design,
+#graphic-design:checked ~ .graphic-design {
+  background-color: #fc5404;
+  color: #fff;
 }
 
 * {
