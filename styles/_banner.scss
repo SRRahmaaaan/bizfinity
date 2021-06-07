@@ -9,13 +9,9 @@
         height: 100%;
         background-color: #f5f6f7;
         .controllers {
-            position: absolute;
+            @include con;
             top: 35%;
-            left: 0;
             background-color: $base-color;
-            padding: 2rem 1.5rem;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
             a {
             display: block;
             height: 15px;
@@ -36,8 +32,7 @@
         }
         .slide {
             flex: 0 0 100%;
-            width: 100%;
-            scroll-snap-align: start;
+            width: 100%;;
             .headings{
                 p{
                     width: 85%;

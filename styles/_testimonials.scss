@@ -1,0 +1,67 @@
+.testimonials {
+    padding: 5rem 0;
+    background-color: $base-color;
+    position: relative;
+    .section-head {
+        width: 35%;
+        margin: 0 auto;
+        color: $light-color;
+        p {
+            color: $light-color;
+        }
+    }
+    .sub-head p {
+        background-color: $light-color;
+        color: $base-color;
+    }
+    .controllers {
+        @include con;
+        top: 55%;
+        background-color: $light-color;
+        a {
+            display: block;
+            background-color: $base-color;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+    }
+    .sliders {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                .border {
+                    border-right: 1px dashed $base-color;
+                }
+                .commentBx {
+                    background-color: $light-color;
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        width: 220px;
+                    }
+                    .comment {
+                        padding: 1rem 2.5rem;
+                        i {
+                            font-size: 3rem;
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.testimonials::before {
+    @include ba;
+    background: url("../media/testi-shape1.png") no-repeat;
+    height: 120px;
+    width: 100px;
+}

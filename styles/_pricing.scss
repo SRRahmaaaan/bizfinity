@@ -1,0 +1,44 @@
+.pricing {
+    background-color: $section-bg;
+    .section-head {
+        width: 35%;
+        margin: 0 auto;
+    }
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        .box {
+            background-color: $light-color;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+            .popular {
+                position: absolute;
+                top: 14px;
+                right: -60px;
+                transform: rotate(45deg);
+                background-color: $base-color;
+                color: $light-color;
+                padding: 5px 70px;
+                display: inline-block;
+            }
+            .second {
+                display: inline-block;
+                border: 1px dashed $base-color;
+                padding: 2.5rem 0;
+                height: 130px;
+                width: 130px;
+                border-radius: 50%;
+                margin: 1.5rem 0;
+                :first-child {
+                    display: inline-block;
+                    transform: translateY(-20px);
+                }
+                span {
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
