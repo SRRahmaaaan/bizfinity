@@ -1,0 +1,50 @@
+@import "_mixin.scss";
+.services .grid {
+    gap: 20px;
+    .box {
+        @include tra;
+        background-color: $light-color;
+        padding: 3rem 2rem;
+        line-height: 4rem;
+        position: relative;
+        z-index: 12;
+        i {
+        @include tra;
+        padding: 1rem;
+        background-color: rgba(252, 84, 4, 0.1);
+        color: $base-color;
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        }
+        p {
+        @include tra;
+        }
+    }
+}
+.services .box .design {
+  @include tra;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 74% 85%, 75% 100%, 50% 85%, 0 85%);
+  z-index: -1;
+}
+.services .box:hover .design {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $base-color;
+}
+.services .box:hover {
+  color: $light-color;
+}
+.services .box:hover i {
+  background-color: $light-color;
+  clip-path: circle(50% at 50% 50%);
+  transform: rotate(360deg);
+}
+.services .box:hover p {
+  color: $light-color;
+}

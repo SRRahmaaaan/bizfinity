@@ -5,6 +5,7 @@
 @import "_navbar.scss";
 @import "_banner.scss";
 @import "_about.scss";
+@import "_services.scss";
 * {
   margin: 0;
   padding: 0;
@@ -18,4 +19,7 @@ html {
 }
 #home {
   overflow: hidden;
+}
+#services {
+  background: #f9faff;
 }
