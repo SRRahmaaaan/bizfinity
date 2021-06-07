@@ -1,0 +1,63 @@
+.banner {
+    height: calc(100vh - 80px);
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        .left {
+        position: relative;
+        height: 100%;
+        background-color: #f5f6f7;
+        .controllers {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            background-color: $base-color;
+            padding: 2rem 1.5rem;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            a {
+            display: block;
+            height: 15px;
+            width: 15px;
+            background-color: $light-color;
+            margin: 10px 0;
+            border-radius: 50%;
+            }
+        }
+        .sliders {
+            display: flex;
+            overflow: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            align-items: center;
+            height: 100%;
+            margin: 0 4rem 0 7rem;
+        }
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+            scroll-snap-align: start;
+            button {
+            background-color: $light-color;
+            color: $base-color;
+            }
+            button:hover {
+            color: $light-color;
+            }
+            button:hover::before {
+            background-color: $base-color;
+            }
+        }
+        }
+        .right {
+        height: 100%;
+            .imgBx {
+                height: 100%;
+                img {
+                height: 100%;
+                object-fit: cover;
+                }
+            }
+        }
+    }
+}

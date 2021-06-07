@@ -1,0 +1,22 @@
+.navbar {
+    height: 80px;
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.05);
+    .flex {
+        justify-content: space-between;
+        .logo {
+        width: 160px;
+        margin-top: 5px;
+        }
+        .navigation ul li {
+        display: inline-block;
+        margin: 0 5px;
+            a {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+            }
+            a:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
