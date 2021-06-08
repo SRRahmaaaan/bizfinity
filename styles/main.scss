@@ -14,6 +14,7 @@
 @import "_pricing.scss";
 @import "_achievements.scss";
 @import "_blog.scss";
+@import "_contact.scss";
 * {
   margin: 0;
   padding: 0;
@@ -36,4 +37,52 @@ html {
 #about,
 #services {
   padding-top: 5.5rem;
+}
+// CLIENTS
+.clients .d-flex {
+  align-items: center;
+}
+.clients img {
+  @include tra;
+  opacity: 0.2;
+}
+.clients .imgBx:hover img {
+  opacity: 1;
+}
+// NEWS
+.news {
+  background-color: $base-color;
+  background-image: url("../media/pattern.png");
+  background-size: cover;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    .left {
+      padding: 1rem 10rem 1rem 0;
+    }
+    .right {
+      input {
+        border: 2px solid $light-color;
+        width: 300px;
+        padding: 1rem;
+        color: $light-color;
+      }
+      button {
+        background-color: $light-color;
+        color: $dark-color;
+        padding: 14px 30px;
+        transform: translateY(1px);
+        border: 2px solid $light-color;
+      }
+    }
+  }
+}
+.news .right button:hover::before {
+  background-color: $base-color;
+  clip-path: ellipse(100% 100% at 100% 50%);
+}
+// FOOTER
+footer {
+  border-top: 2px solid #ccc;
+  padding: 1rem;
 }

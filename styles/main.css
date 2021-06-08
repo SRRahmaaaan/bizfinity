@@ -1187,6 +1187,113 @@ textarea:focus {
   cursor: pointer;
 }
 
+.contact .grid {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.contact .grid .first .logo {
+  width: 170px;
+}
+
+.contact .grid .first .social i {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #fc5404;
+  padding: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact .grid .second ul {
+  margin-top: 1.6rem;
+  color: #666666;
+  font-size: 14px;
+  line-height: 2rem;
+}
+
+.contact .grid .second ul li {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact .grid .third > :nth-child(2) {
+  width: 70%;
+  margin: 2rem 0 1rem 0;
+}
+
+.contact .grid .third > .addresses a {
+  font-size: 14px;
+  color: #666666;
+  margin-left: 2px;
+}
+
+.contact .grid .third > .addresses i {
+  margin-right: 10px;
+  color: #fc5404;
+}
+
+.contact .grid .third > .addresses p {
+  margin-top: 10px;
+}
+
+.contact .grid .fourth .grid {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.contact .grid .fourth .grid .imgBx {
+  position: relative;
+}
+
+.contact .grid .fourth .grid .imgBx .content {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 84, 4, 0.5);
+  text-align: center;
+  padding-top: 2rem;
+  color: #fff;
+  opacity: 0;
+}
+
+.contact .grid .fourth .grid .imgBx .content i {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.contact .first .social i:hover {
+  -webkit-filter: grayscale(2);
+          filter: grayscale(2);
+}
+
+.contact .second ul li:hover {
+  margin-left: 5px;
+  color: #fc5404;
+  cursor: pointer;
+}
+
+.contact .third .addresses a:hover {
+  color: #fc5404;
+}
+
+.contact .fourth .imgBx:hover #content {
+  opacity: 1;
+}
+
+.contact .fourth .imgBx:hover #content i {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1215,5 +1322,66 @@ html {
 #about,
 #services {
   padding-top: 5.5rem;
+}
+
+.clients .d-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients img {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.2;
+}
+
+.clients .imgBx:hover img {
+  opacity: 1;
+}
+
+.news {
+  background-color: #fc5404;
+  background-image: url("../media/pattern.png");
+  background-size: cover;
+}
+
+.news .grid {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .grid .left {
+  padding: 1rem 10rem 1rem 0;
+}
+
+.news .grid .right input {
+  border: 2px solid #fff;
+  width: 300px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.news .grid .right button {
+  background-color: #fff;
+  color: #000;
+  padding: 14px 30px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  border: 2px solid #fff;
+}
+
+.news .right button:hover::before {
+  background-color: #fc5404;
+  -webkit-clip-path: ellipse(100% 100% at 100% 50%);
+          clip-path: ellipse(100% 100% at 100% 50%);
+}
+
+footer {
+  border-top: 2px solid #ccc;
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

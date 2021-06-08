@@ -1,0 +1,87 @@
+.contact {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        .first {
+            .logo {
+                width: 170px;
+            }
+            .social i {
+                @include tra;
+                background-color: $base-color;
+                padding: 1rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+        }
+        .second {
+            ul {
+                margin-top: 1.6rem;
+                color: $p-color;
+                font-size: 14px;
+                line-height: 2rem;
+                li {
+                    @include tra;
+                }
+            }
+        }
+        .third > {
+            :nth-child(2) {
+                width: 70%;
+                margin: 2rem 0 1rem 0;
+            }
+            .addresses {
+                a {
+                    font-size: 14px;
+                    color: $p-color;
+                    margin-left: 2px;
+                }
+                i {
+                    margin-right: 10px;
+                    color: $base-color;
+                }
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .fourth {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                .imgBx {
+                    position: relative;
+                    .content {
+                        @include tra;
+                        @include ba;
+                        background-color: rgba(252, 84, 4, 0.5);
+                        text-align: center;
+                        padding-top: 2rem;
+                        color: $light-color;
+                        opacity: 0;
+                        i {
+                            @include tra;
+                            transform: scale(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.contact .first .social i:hover {
+    filter: grayscale(2);
+}
+.contact .second ul li:hover {
+    margin-left: 5px;
+    color: $base-color;
+    cursor: pointer;
+}
+.contact .third .addresses a:hover {
+    color: $base-color;
+}
+.contact .fourth .imgBx:hover #content {
+    opacity: 1;
+}
+.contact .fourth .imgBx:hover #content i {
+    transform: scale(1);
+}
