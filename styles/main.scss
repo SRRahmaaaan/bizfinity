@@ -12,6 +12,8 @@
 @import "_team.scss";
 @import "_testimonials.scss";
 @import "_pricing.scss";
+@import "_achievements.scss";
+@import "_blog.scss";
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +28,8 @@ html {
 #home {
   overflow: hidden;
 }
-#services {
+#services,
+#blog {
   background: $section-bg;
 }
 #portfolio,

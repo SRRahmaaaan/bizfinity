@@ -1073,6 +1073,120 @@ textarea:focus {
   font-weight: 900;
 }
 
+.achievements {
+  background: url("../media/achievements.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+.achievements .grid {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.achievements .grid .box .imgBx {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.achievements .grid .box .imgBx i {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #fc5404;
+  padding: 1rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  font-size: 3rem;
+  border-radius: 50%;
+}
+
+.achievements .grid .box h3 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.achievements .grid .box p {
+  font-size: 1.5rem;
+}
+
+.achievements::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+
+.achievements .box:hover .imgBx i {
+  -webkit-transform: scale(1) rotate(360deg);
+          transform: scale(1) rotate(360deg);
+  background-color: #fff;
+  color: #fc5404;
+}
+
+.blog .section-head {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.blog .grid {
+  gap: 20px;
+}
+
+.blog .grid .card {
+  background-color: #fff;
+}
+
+.blog .grid .card .card-head {
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.blog .grid .card .imgBx {
+  overflow: hidden;
+}
+
+.blog .grid .card .imgBx img {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.blog .grid .card .imgBx .border {
+  width: 100%;
+  height: 5px;
+  background-color: #fc5404;
+  margin-top: -5px;
+}
+
+.blog .grid .card .content {
+  padding: 1rem 1rem 2rem 1rem;
+  border: 1px solid #ccc;
+}
+
+.blog .grid .card .content i {
+  margin-right: 5px;
+  color: #fc5404;
+  font-weight: 900;
+}
+
+.blog .card:hover .imgBx img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog .card .content .d-flex p:hover,
+.blog .card .card-head:hover {
+  color: #fc5404;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1092,7 +1206,8 @@ html {
   overflow: hidden;
 }
 
-#services {
+#services,
+#blog {
   background: #f9faff;
 }
 

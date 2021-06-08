@@ -1,0 +1,43 @@
+.achievements {
+  background: url("../media/achievements.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    .box {
+      .imgBx {
+        background-color: rgba(255, 255, 255, 0.6);
+        display: inline-block;
+        border-radius: 50%;
+        i {
+          @include tra;
+          background-color: $base-color;
+          padding: 1rem;
+          transform: scale(0.8);
+          font-size: 3rem;
+          border-radius: 50%;
+        }
+      }
+      h3 {
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.achievements::before {
+  @include ba;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+.achievements .box:hover .imgBx i {
+  transform: scale(1) rotate(360deg);
+  background-color: $light-color;
+  color: $base-color;
+}
