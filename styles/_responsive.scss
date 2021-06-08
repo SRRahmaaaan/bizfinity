@@ -1,0 +1,84 @@
+@media screen and (max-width: 1200px) {
+  .services .section-head {
+    width: 85% !important;
+  }
+  .team .section-head,
+  .testimonials .section-head,
+  .pricing .section-head,
+  .blog .section-head{
+      width: 55% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+  .portfolio .section-head {
+    width: 55% !important;
+  }
+  #about,
+  #services,
+  .call,
+  .portfolio {
+    margin-top: 0;
+    padding: 2rem 0 !important;
+  }
+  .clients .d-flex{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .news .grid{
+      grid-template-columns: 1fr !important;
+      justify-items: center;
+      text-align: center;
+      gap: 30px;
+     .left {
+        padding: 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+  .services .section-head {
+    width: 100% !important;
+  }
+  .portfolio .section-head,
+  .team .section-head,
+  .testimonials .section-head,
+  .pricing .section-head,
+  .blog .section-head {
+    width: 70% !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .portfolio .section-head,
+  .team .section-head,
+  .testimonials .section-head,
+  .pricing .section-head,
+  .blog .section-head {
+    width: 100% !important;
+  }
+  .news .right{
+      input,
+      button{
+          width: 100% !important;
+          margin-bottom: 10px;
+      }
+  }
+}
+@media screen and (max-width: 375px) {
+  h1,
+  h2 {
+    font-size: 23px;
+  }
+  .card-head,
+  .blog .card-head {
+    font-size: 18px !important;
+  }
+}

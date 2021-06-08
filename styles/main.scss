@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-@import "_utilities";
-@import "_variables";
-@import "_margins&paddings";
+@import "_variables.scss";
+@import "_margins&paddings.scss";
+@import "_utilities.scss";
 @import "_mixin.scss";
+@import "_responsive.scss";
 @import "_navbar.scss";
 @import "_banner.scss";
 @import "_about.scss";
@@ -86,3 +87,4 @@ footer {
   border-top: 2px solid #ccc;
   padding: 1rem;
 }
+

@@ -70,3 +70,14 @@
     background-color: $base-color;
     color: $light-color;
 }
+@media screen and (max-width: 768px) {
+    .portfolio label{
+        display: block;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .portfolio .boxes .box{
+        width: 100%;
+    }
+}

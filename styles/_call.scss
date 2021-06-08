@@ -40,3 +40,39 @@
         width: 100%;
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+    .call .left{
+        padding: 0;
+    }
+    .call .right{
+        padding: 30px !important;
+    }
+    .call .right .inputs{
+        .d-flex{
+            flex-direction: column;
+        }
+        .input-2,
+        .input-3{
+            width: 100%;
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .call .grid{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        .left{
+            text-align: center;
+            padding: 0 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .call .grid .left{
+        padding: 0;
+    }
+}

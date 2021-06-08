@@ -9,7 +9,6 @@
     }
     .card {
         background-color: $light-color;
-        margin-bottom: 5rem;
         .imgBx {
             position: relative;
             .social-media {
@@ -18,13 +17,15 @@
             background-color: rgba(0, 0, 0, 0.4);
             text-align: center;
             opacity: 0;
+            padding: 3rem 0;
                 .icons {
                     @include tra;
-                    transform: translateY(300px) rotateX(90deg);
+                    transform: rotateX(90deg);
+                    margin-top: 60%;
                     i {
                         @include tra;
                         background-color: $light-color;
-                        margin: 0 5px;
+                        margin: 5px;
                         padding: 1rem;
                     }
                 }
@@ -43,11 +44,31 @@
     opacity: 1;
 }
 .team .card:hover .social-media .icons {
-    transform: translateY(300px) rotateX(0deg);
+    transform: rotateX(0deg);
 }
 .team .card .social-media .icons i:hover {
     border-radius: 50%;
     cursor: pointer;
     background-color: $base-color;
     color: $light-color;
+}
+
+
+@media screen and(max-width: 992px) {
+    .team .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and(max-width: 600px) {
+    .team .grid{
+        grid-template-columns: repeat(1, 1fr);
+        .card .identity{
+            margin: 0;
+        }
+    }
+}
+@media screen and (max-width: 280px) {
+    .card .imgBx .social-media .icons{
+        margin-top: 20% !important;
+    }
 }

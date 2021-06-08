@@ -41,3 +41,17 @@
   background-color: $light-color;
   color: $base-color;
 }
+@media screen and (max-width: 1024px) {
+  .achievements .grid{
+    grid-template-columns: repeat(2, 1fr);
+    .box{
+      border: 2px solid $p-color;
+      padding: 4rem 0;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .achievements .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

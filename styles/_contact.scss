@@ -85,3 +85,17 @@
 .contact .fourth .imgBx:hover #content i {
     transform: scale(1);
 }
+@media screen and (max-width: 1024px) {
+    .contact .grid{
+        grid-template-columns: repeat(2, 1fr);
+        .second,
+        .third{
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .contact .grid{
+        grid-template-columns: 1fr;
+    }
+}

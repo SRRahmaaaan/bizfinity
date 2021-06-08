@@ -1,6 +1,6 @@
 .blog {
     .section-head {
-        width: 35%;
+        width: 40%;
         margin: 0 auto;
     }
     .grid {
@@ -42,4 +42,20 @@
 .blog .card .card-head:hover {
     color: $base-color;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .blog .grid{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .blog .grid{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+@media screen and (max-width: 280px) {
+    .blog .grid .card .content .d-flex{
+        flex-direction: column;
+    }
 }

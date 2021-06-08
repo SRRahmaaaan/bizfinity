@@ -24,3 +24,61 @@
         }
     }
 }
+#checkbox{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .navbar .navigation {
+        @include tra;
+        position: fixed;
+        z-index: -1;
+        top: -100%;
+        width: 100%;
+        background-color: $light-color;
+        left: 0;
+        min-height: 50vh;
+        ul {
+            margin-top: 2rem;
+            line-height: 3rem;
+            li {
+                display: block !important;
+            }
+        }
+    }
+    .navbar .button {
+        display: none;
+    }
+    #bars {
+        height: 40px;
+        width: 50px;
+        cursor: pointer;;
+        .bar {
+            @include tra;
+            height: 3px;
+            width: 100%;
+            background-color: $dark-color;
+            margin: 10px 0;
+        }
+    } 
+    #checkbox:checked ~ .navigation {
+        top: 80px;
+    }
+    #checkbox:checked ~ #bars > .bar {
+        background-color: $danger-color;
+    }
+    #checkbox:checked ~ #bars > #bar-1 {
+        transform: rotate(135deg);
+    }
+    #checkbox:checked ~ #bars > #bar-2 {
+        opacity: 0;
+    }
+    #checkbox:checked ~ #bars > #bar-3 {
+        transform: rotate(-135deg);
+        margin-top: -25px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .navbar .flex .logo {
+        width: 120px !important;
+    }
+}
